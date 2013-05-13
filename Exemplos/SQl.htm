@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://www.ifc-camboriu.edu.br/~frozza/2013.1/demoSQLT/ -->
+<html manifest="offlinedatabase.manifest"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   	  
+   	  <meta name="viewport" content="width=480; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+      <title>Offline HTML5 SQLite - blog.vilourenco.com.br</title>
+      <script type="text/javascript" src="offlinedatabaseJS.js"></script>
+   <style>
+ 	body { font-family:Verdana, Geneva, sans-serif; font-size:11px; }
+   </style>
+      
+      
+   </head>
+   <body onload="onInit()">
+      <h3>Dados:</h3>
+      <ul id="itemData" style="cursor:pointer;">
+		  <li id="2" class="data" onclick="onSelect(this)">teste x 44</li>
+		  <li id="3" class="data" onclick="onSelect(this)">teste x 44</li>
+	  </ul>
+	  <h3>Detalhes:</h3>
+      <form name="itemForm">
+		<label for="id">Id:</label>
+			<input type="text" name="id" id="id" size="2" disabled="true">
+		<label for="nome">Nome:</label>
+			<input type="text" name="nome" id="nome" size="10/">
+		<label for="idade">Idade</label>
+			<input type="text" name="idade" id="idade" size="3"> <br>
+		<br>
+		<input type="button" name="create" value="Create" onclick="onCreate()">
+		<input type="button" name="update" value="Update" onclick="onUpdate()">
+		<input type="button" name="delete" value="Delete" onclick="onDelete()">
+      </form>
+	  <h4>Status:</h4>
+      <div id="status">Erro: 'Nome' e 'Idade' são campos obrigatórios!</div>
+   
+	  
+	</body>
+</html>

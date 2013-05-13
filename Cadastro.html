@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery.mobile-1.3.0.min.js"></script>
+	  <script type="text/javascript" src="CRUDCadastro.js"></script> 
+	  <script type="text/javascript" src="Cadastro.js"></script>
+      <link rel="stylesheet" href="js/jquery.mobile-1.3.0.min.css" />
+	</head> 
+   <body onload="onInit()">
+
+<!--===============================================================================================================-->
+	<div id="pg" data-role="page" data-title="Formulário" id="formulario">
+ 		<div data-role="header" data-theme="a">
+			<h5>
+				Cadastro de Clientes
+			</h5>
+		</div>
+
+ <div id="cto"  data-role="content" data-theme="b">
+
+        <form method="post" id="frmCadastro">
+			
+            <div id="frm" data-role="fieldcontain">  
+                <fieldset id="fs" data-role="controlgroup">
+					<label for="id" style="width:90px">ID</label>
+                    <input id="id" value="" type="text" disabled="true"/><br>
+                    <label for="nome" style="width:90px">Nome</label>
+                    <input name="nome" id="nome" value="aa" type="text"/><br>
+					<label for="endereco" style="width:90px">Endereço</label>
+					<input name="endereco" id="endereco" value="" type="text"/><br>
+					<label for="numero" style="width:90px">Número</label>
+					<input name="numero" id="numero" value="" type="text"/>
+				</fieldset>
+            </div>  
+			
+            <div data-role="fieldcontain" style="width:1000px">
+                <label for="estcivil" style="width:95px">Est. Civil:</label>
+                <select name="civil" id="estcivil" style="width:900px;">
+                    <option value="Casado">Casado</option>
+                    <option value="Solteiro">Solteiro</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Viúvo">Viúvo</option>
+                </select><br>
+				<label for="idade" style="width:95px">Faixa Etária:</label>
+				<input type="range" name="slider" id="idade" value="0" min="0" max="100" step="1"/><br>
+				<label for="obs" style="width:90px">Observação:</label>
+				<textarea name="textarea" id="obs" style="width:820px;"> </textarea>
+			</div>
+			
+            <div data-position="inline" style="width:100%; background-color:gray;">
+					<input type="button" class="ui-btn-right" data-theme="e" name="create" value="Salvar" onclick="onCreate()">
+					<input type="button" class="ui-btn-right" data-theme="b" id="btnAtualizar" value="Atualizar" onclick="onUpdate()">
+					<input type="button" class="ui-btn-right" data-theme="b" id="btnExcluir" value="Excluir" onclick="onDelete()">  
+			</div> 
+		</form>
+		</br>
+		<h3>Dados:</h3>
+		<ul id="itemData" style="cursor:pointer;">
+		  <li id="2" class="data" onclick="onSelect(this)">teste x 44</li>
+		  <li id="3" class="data" onclick="onSelect(this)">teste x 44</li>
+		</ul>
+		</br>
+		
+		
+		<div id="status" style="background-color:blue; color: red; position:absolute; width:1410px">
+		 
+		</div> <br/>
+		
+		<table id="tblList">
+		</table>
+
+    </div>
+	
+		<div  data-role="footer" data-theme="b">
+			<a href= "#page3" data-transition="flip">Mauricio Vicente</a>
+		</div>
+	
+	</div>	
+	
+<!--===============================================================================================================-->
+
+		<div data-role="page" data-title="Página 3" id="page3" data-theme="b">
+		
+			<div data-role="header" data-theme="a">
+				<a href="#page1" data-rel="back">Voltar</a> 
+				<h5>
+					IFC - Instituto Federal Catatinense - Campus Camboriú
+				</h5>
+				<a href="#page1" data-icon="home"> Principal </a> 
+				
+			</div>
+			
+			<div data-role="content">
+				<div class="ui-grid-a" style="width: 500px;">
+					<div class="ui-block-a" style = "height: 30px; width: 100px"><div class="ui-bar ui-bar-d">Aluno:</div></div>
+					<div class="ui-block-b" style = "height: 30px; width: 400px"><div class="ui-bar ui-bar-d">Mauricio Vicente</div></div>
+					<div class="ui-block-a" style = "height: 30px; width: 100px"><div class="ui-bar ui-bar-d">Curso:</div></div>
+					<div class="ui-block-b" style = "height: 30px; width: 400px"><div class="ui-bar ui-bar-d">Tecnologia de Sistemas para Internet</div></div>
+					<div class="ui-block-a" style = "height: 30px; width: 100px"><div class="ui-bar ui-bar-d">Disciplina:</div></div>
+					<div class="ui-block-b" style = "height: 30px; width: 400px"><div class="ui-bar ui-bar-d">Progamação para Dispositivos Mõveis</div></div>
+					<div class="ui-block-a" style = "height: 30px; width: 100px"><div class="ui-bar ui-bar-d">Professor:</div></div>
+					<div class="ui-block-b" style = "height: 30px; width: 400px"><div class="ui-bar ui-bar-d">Angelo Frozza</div></div>
+					<div class="ui-block-a" style = "height: 30px; width: 100px"><div class="ui-bar ui-bar-d">Turma:</div></div>
+					<div class="ui-block-b" style = "height: 30px; width: 400px"><div class="ui-bar ui-bar-d">TSI11</div></div>
+				</div>
+			</div>
+			
+			<div data-role="footer" data-position="fixed" data-theme="b">
+				<h3>
+					© 2013
+				</h3>
+			</div>
+		</div>
+	
+	
+    </body>
+</html>	
